@@ -72,6 +72,7 @@ public class CreateFolders : EditorWindow {
     void OnGUI() 
     {
         EditorGUILayout.LabelField("Insert the Project name used as the root folder:");
+        projectName = Directory.GetParent(Directory.GetCurrentDirectory() + "/").Name;        
         projectName = EditorGUILayout.TextField("Project Name:", projectName);
         this.Repaint();
         GUILayout.Space(50);
